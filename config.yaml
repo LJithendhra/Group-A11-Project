@@ -1,0 +1,8 @@
+path: 
+train: project_emergency vehicles_annotations_2024_10_14_12_12_47_yolov8 detection 1.0/images/train
+val: project_emergency vehicles_annotations_2024_10_14_12_12_47_yolov8 detection 1.0/images/train
+
+names:
+  0: Ambulance
+path: .
+train: train.txt
