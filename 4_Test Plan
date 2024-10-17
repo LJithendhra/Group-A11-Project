@@ -2,13 +2,16 @@ Test Case 1 – Greyscale and Augmentation Impact on Detection:
   1) Objective: Test how augmentation techniques (greyscale conversion, blurring, noise addition) impact the detection accuracy.
   2) Process: Compare the performance of models trained with greyscale and augmented images to those trained on original images.
   3) Expected Outcome: The augmented models (with greyscale, blur, noise) provide more robust detection in real-world conditions, especially under low-quality or noisy data.
+
 Test Case 2 – YOLOv11n Object Detection Model:
   1) Objective: Test the accuracy of YOLOv11n for detecting vehicles such as ambulances, fire engines, and regular cars in real-time.
   2) Expected Outcome: The model correctly detects vehicles with at least 90% accuracy under different conditions.
+
 Test Case 3 – Epoch Testing for Model Performance:
   1) Objective: Test model performance across different epoch settings (10, 20, 50).
   2) Process: Train the model for 10, 20, and 50 epochs. Evaluate its performance in terms of accuracy, detection speed, and error rates.
   3) Expected Outcome: The model performs best at 50 epochs, balancing accuracy and training efficiency.
+
 Test Case 4 – Traffic Signal Timing Based on Vehicle Density:
   1) Objective: Test the system’s ability to assign appropriate traffic signal timings based on the vehicle density.
   2) Process: Simulate traffic with varying vehicle densities and observe if the time assigned is within the 5-120 seconds range.
