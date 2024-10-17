@@ -1,0 +1,46 @@
+Implementation – Iteration 1 :
+
+1) Dataset Collection:
+Collected datasets from Kaggle, Roboflow, and open-source image datasets containing vehicle images for training the model.
+
+2) Image Labeling and Annotation:
+Used the CVAT.ai platform to label and annotate the vehicle images for the training process. This included drawing bounding boxes around vehicles like ambulances, fire engines, and other regular cars.
+
+3) Preprocessing of Images:
+Resized all images to a fixed resolution of 640 x 640 pixels to maintain uniformity.
+Applied auto-orientation to correct any misaligned images.
+Converted some images to greyscale and performed basic data cleaning as part of preprocessing.
+
+4) Data Augmentation:
+Performed data augmentation to improve the model's ability to detect vehicles in different conditions:
+Converted 15% of the images to greyscale.
+Applied blur to some images.
+Added noise to other images to improve detection under various conditions.
+
+5) Model Training:
+Used YOLOv11 Object Detection Model to train the AI system for detecting vehicles.
+Initially tried YOLOv11m but faced compatibility issues, switched to YOLOv11n for better performance.
+Trained the model with 150 epochs, but later adjusted to 50 epochs, which provided the best results.
+Used various training iterations (10, 20, 50 epochs) to fine-tune model performance.
+
+Implementation – Iteration 2 :
+Iteration 1 – YOLOv11n with 10 Epochs
+ Objective: Test initial object detection accuracy and performance.
+    Result: The model did not perform as expected. It failed to detect vehicles accurately, especially in real-time conditions.
+
+Iteration 2 – YOLOv11n with 20 Epochs:
+   Objective: Improve detection accuracy by increasing the number of epochs.
+   Result: The model showed slight improvement but still had issues with accuracy, especially with detecting smaller vehicles and under noisy or blurry   conditions.
+
+Iteration 3 – YOLOv11n with 50 Epochs:
+  Objective: Optimize model performance with 50 epochs and further data augmentation.
+ Result: The model achieved significant improvements, with over 90% accuracy in detecting vehicles such as ambulances, fire engines, and regular cars. It performed well in real-time, even in varied lighting and environmental conditions.
+ Validation:
+Use Case Validation: The model successfully detected high-priority vehicles and adjusted traffic signals dynamically, as per the defined use cases.
+Test Case Validation: The system passed all critical test cases, including vehicle detection under noise, blur, and various environmental conditions. The performance in terms of accuracy and real-time object detection was validated to be within the desired range.
+
+Implementation – Iteration 3 :
+Results:-
+
+The final YOLOv11n model, after 50 epochs, was able to accurately detect ambulances, fire engines, and regular vehicles with high precision.
+The model was able to achieve over 90% detection accuracy, making it highly reliable for real-time traffic management. 
