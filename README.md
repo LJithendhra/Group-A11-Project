@@ -1,4 +1,4 @@
-**Image & video processing, analysis of traffic signal areas using deep learning model**
+**Image & video processing, analysis of traffic signal areas to find emergency vehicles using deep learning models**
 
 
 
